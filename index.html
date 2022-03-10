@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horo 2022</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/generator.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="http://areal52.ru/site/img/gemini.png">
+</head>
+
+<body>
+    <div class="cb-wrap">
+        <div id="page1" class="cb-page">
+            <div class="cb-container">
+                <div class="cb-title">
+                    <div>
+                        <h1>Anda adalah salah satu dari 100 orang yang beruntung dipilih Yulius Fang dan lihat takdir
+                            Anda di tahun 2022. Manfaatkan itu!</h1>
+                        <h1>----------- </h1>
+                    </div>
+                    <img src="img/1.png" class="cb-image">
+                </div>
+                <div>
+                    <!-- <p>Maraming mga tao ang nararamdaman na hindi sila nag-iisa sa mundo at mayroong isang Anghel na Tagapangalaga, na kasama sila mula sa kapanganakan hanggang sa katapusan ng buhay. Sinasabi nila na ang isang tao ay maaaring matuto kung paano "makipag-usap" sa iyong makalangit na patron - ngunit kailangan mo munang itakda ang kinakailangang alon.</p> -->
+                </div>
+                <div class="cb-form">
+                    <div class="cb-title-form">
+                        <button class="">
+                            Masukkan nama Anda pada formulir di bawah ini
+                        </button>
+                    </div>
+                    <div class="cb-form-main">
+                        <input type="text" placeholder="Namamu" name="cb-name">
+                    </div>
+                    <button type="button" class="cb-submit" id="page1Submit">KAU MULAI</button>
+                </div>
+
+                <div class="chua-and-purple">
+                    <img src="img/Hanz Chua and Purple Plum Fairy1.jpeg">
+                    <div class="cb-label">
+                        <b>Banyak orang telah percaya dan mengkonfirmasi prediksi saya itu benar, dan membantu mereka
+                            untuk mengubah nasibnya.</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page2" class="cb-page">
+            <div class="cb-container">
+                <div class="cb-title">
+                    <div>
+                        <h1>Hi <span id="cb-show-name"></span>! Apakah Anda sudah Siap Mengetahui Rahasia Masa Depan
+                            Anda?</h1>
+                    </div>
+
+                </div>
+                <div>
+                    <!-- <p>Yulius Fang membutuhkan beberapa informasi, Silakan klik tangan yang menyerupai tangan kiri Anda...</p> -->
+                </div>
+                <div class="tarot-face">
+                    <div class="tarot-face_option">
+                        <h3>Camera screen</h3>
+                        <video id="video_face" autoplay width="320" height="244" class="result-face"></video>
+                        <button type="button" class="cb-submit" id="take_a_picture">Kumuha ng larawan</button>
+                        <button type="button" class="cb-submit" id="click-photo">Pumili ng larawan</button>
+                    </div>
+                    <div class="tarot-face_option">
+                        <h3>Your picture</h3>
+                        <canvas id="canvas_face" width="320" height="240" class="result-face"></canvas>
+                        <input name="select_a_picture" type="file" accept="image/*">
+                        <button type="button" class="cb-submit" id="select_a_picture">Pumili ng larawan</button>
+                    </div>
+                </div>
+                <div id="resultCards">
+                    <input name="cardSelected" value="0" hidden>
+                </div>
+
+                <div class="cb-form">
+                    <button type="button" class="cb-submit" id="submitPage2">
+                        Lihat hasil Anda <br>
+                        (mengobrol dengan Dewi Sundari)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap" id="screenFirst">
+
+        <div class="chat show-chat zoomIn animated">
+
+            <div class="chat show-chat zoomIn animated">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <div class="chat-header-container down">
+                            <div class="chat-header-container-wrapper">
+                                <div class="chat-header-container-image-left">
+                                    <div class="chat-header-container-image">
+                                        <img src="img/avt.png" alt="" id="avatar_chat">
+                                    </div>
+                                    <div class="chat-header-container-image">
+                                        <img src="img/message-icon.png" alt="">
+                                    </div>
+                                    <div class="chat-header-container-image" style="color:white">
+                                        <span><b style="color:444">Dewi Sundari</b></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="chat-content">
+                        <div class="chat-content-container">
+                            <div class="chat-content-list">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form action="https://www.zodiac5.xyz/hnzny" method="get" id="cont_form" class="form-order">
+                <div class="form_block">
+                    <!-- <div class="prices_block">Order form
+                        amulet by Rudy Baldwin for <span class="new_price_val">1990</span><span class="new_price_cur" >₱</span></div>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Name" required="" class="form-control input-lg">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="phone" placeholder="Phone" required="" class="form-control input-lg">
+                    </div>
+                    <input type="hidden" name="comments"> -->
+                    <input type="submit" value="Order!" class="btn-primary">
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="js/typed.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+
+    <span class="country_action" style="opacity: 0">whole Filipines</span>
+    <select name="country" id="select_city"></select>
+    <span class="new_price_val" style="opacity: 0"></span>
+    <span class="new_price_cur" style="opacity: 0"></span>
+    <script src="js/jquery.cookie.min.js"></script>
+    <script src="js/purl.min.js"></script>
+    <script src="js/jquery.inputmask.bundle.min.js"></script>
+    <span class="new_price_val"></span>
+    <script>
+        setInterval(function () {
+            let name_city = $('#new_price_val').text();
+            $('.new_price_val').text(name_city);
+            $('.new_price_cur').text($('#new_price_cur').text());
+        }, 300)
+    </script>
+</body>
+
+</html>
