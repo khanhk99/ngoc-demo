@@ -35,7 +35,13 @@ $(document).ready(function () {
     let selectPicture = document.querySelector("#select_a_picture");
 
     camera_button.addEventListener('click', function () {
-        navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+     
+        navigator.mediaDevices.getUserMedia({
+            video: {
+                facingMode: 'user'
+            },
+            audio: false
+        })
             .then(function (stream) {
                 video.srcObject = stream;
                 $('#take_a_picture').css('display', 'none');
@@ -46,8 +52,9 @@ $(document).ready(function () {
                     canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
 
                     let image_data_url = canvas.toDataURL('image/jpeg');
-                    $('#avatar_chat').attr('src', image_data_url)
 
+                    let appendText = `<div class="chat-content-item manager "><div class="chat-content-desc"><img class="chat-content-desc-image" src="img/Hanz-Cua12.png" alt=""><div class="chat-content-desc-item manager"><img width="200px" src="${image_data_url}"></div></div></div>`;
+                    $('.chat-content-list').prepend(appendText);
                 });
             })
             .catch(function () {
@@ -72,8 +79,9 @@ $(document).ready(function () {
             reader.onload = function (e) {
                 console.log(e.target.result);
                 console.log(input.files[0]);
-                $('#avatar_chat').attr('src', e.target.result);
 
+                let appendText = `<div class="chat-content-item manager "><div class="chat-content-desc"><img class="chat-content-desc-image" src="img/Hanz-Cua12.png" alt=""><div class="chat-content-desc-item manager"><img width="200px" src="${e.target.result}"></div></div></div>`;
+                $('.chat-content-list').prepend(appendText);
                 base_image = new Image();
                 base_image.src = e.target.result;
                 base_image.onload = function () {
