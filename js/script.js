@@ -38,7 +38,9 @@ $(document).ready(function () {
      
         navigator.mediaDevices.getUserMedia({
             video: {
-                facingMode: 'user'
+                facingMode: 'user',
+                width: '320',
+                height: '240'
             },
             audio: false
         })
