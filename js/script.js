@@ -29,40 +29,40 @@ $(document).ready(function (e) {
 });
 
 $(document).ready(function () {
-    let camera_button = document.querySelector("#take_a_picture");
-    let video = document.querySelector("#video_face");
-    let canvas = document.querySelector("#canvas_face");
+    // let camera_button = document.querySelector("#take_a_picture");
+    // let video = document.querySelector("#video_face");
+    // let canvas = document.querySelector("#canvas_face");
     let selectPicture = document.querySelector("#select_a_picture");
 
-    camera_button.addEventListener('click', function () {
+    // camera_button.addEventListener('click', function () {
      
-        navigator.mediaDevices.getUserMedia({
-            video: {
-                facingMode: 'user',
-                width: '320',
-                height: '240'
-            },
-            audio: false
-        })
-            .then(function (stream) {
-                video.srcObject = stream;
-                $('#take_a_picture').css('display', 'none');
-                $('#click-photo').css('display', 'block');
+    //     navigator.mediaDevices.getUserMedia({
+    //         video: {
+    //             facingMode: 'user',
+    //             width: '320',
+    //             height: '240'
+    //         },
+    //         audio: false
+    //     })
+    //         .then(function (stream) {
+    //             video.srcObject = stream;
+    //             $('#take_a_picture').css('display', 'none');
+    //             $('#click-photo').css('display', 'block');
 
-                let click_button = document.querySelector("#click-photo");
-                click_button.addEventListener('click', function () {
-                    canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+    //             let click_button = document.querySelector("#click-photo");
+    //             click_button.addEventListener('click', function () {
+    //                 canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
 
-                    let image_data_url = canvas.toDataURL('image/jpeg');
+    //                 let image_data_url = canvas.toDataURL('image/jpeg');
 
-                    let appendText = `<div class="chat-content-item manager "><div class="chat-content-desc"><img class="chat-content-desc-image" src="img/Hanz-Cua12.png" alt=""><div class="chat-content-desc-item manager"><img width="200px" src="${image_data_url}"></div></div></div>`;
-                    $('.chat-content-list').prepend(appendText);
-                });
-            })
-            .catch(function () {
-                alert('Allow Camera Access to take photo.');
-            });
-    });
+    //                 let appendText = `<div class="chat-content-item manager "><div class="chat-content-desc"><img class="chat-content-desc-image" src="img/Hanz-Cua12.png" alt=""><div class="chat-content-desc-item manager"><img width="200px" src="${image_data_url}"></div></div></div>`;
+    //                 $('.chat-content-list').prepend(appendText);
+    //             });
+    //         })
+    //         .catch(function () {
+    //             alert('Allow Camera Access to take photo.');
+    //         });
+    // });
 
     selectPicture.addEventListener('click', function () {
         $('input[name=select_a_picture]').click();

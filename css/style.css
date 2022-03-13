@@ -168,7 +168,6 @@ body{
     border-width: 0 0 1px 0;
     border-style: dashed;
     border-color: rgb(197, 30, 225);
-    margin-top: 40px;
     padding: 0 0 40px 0;
 }
 
@@ -185,4 +184,8 @@ body{
 
 .tarot-face_option input[type=file]{
     display: none;
+}
+
+.tarot-face_option .cb-submit{
+    margin-bottom: 25px;
 }
